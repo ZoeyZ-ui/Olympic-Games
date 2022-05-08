@@ -31,7 +31,7 @@ While the population plays an important role in how a country will place, the Gr
 
 In order to determine the number of sports each country had competing in the Olympics; we created a summary table. This summary table shows the level of country participation within each sport. For example, the sport of Archery has two countries participating, Taiwan and France. 
 
-This summary table is important because it shows the distribution of each country’s participation at each sporting event, as well as the number of athletes competing. As you can see, many countries participate in the sport “Athletics”, which in this case refers to the Track and Field events. The chart here was too long to fit the report, but it shows that Kenya has 13 athletes participating, which was significantly more than most of the other countries. This can allude to higher participation increases the likelihood of that country receiving a medal.
+This summary table is important because it shows the distribution of each country’s participation at each sporting event, as well as the number of athletes competing. Many countries participate in the sport “Athletics”, which in this case refers to the Track and Field events. The shows that Kenya has 13 athletes participating, which was significantly more than most of the other countries. This can allude to higher participation increases the likelihood of that country receiving a medal.
 
   
 ## Conclusion  
