@@ -1,12 +1,12 @@
 # Olympic-Games
 ## Table of contents
-* [General info] (https://github.com/ZoeyZ-ui/Olympic-Games#header-name:General info).
+* [General info] (https://github.com/ZoeyZ-ui/Olympic-Games#Generalinfo).
 * [Technologies] (# technologies)
 * [Data] (# data)
 * [Analysis] (# analysis)
 * [Conclusion] (# conclusion)
 
-## General info
+## Generalinfo
 The Olympic Games is an internationally celebrated, multi-sports event that takes place every two years. Competition and comradery among countries is what attracts people to this event. In this project we plan to examine the important features of the Olympics and the effect their country's size and GDP has on their performance. This information could help the Olympic Coordinators predict how countries will do in future Olympics based on the population and GDP of their country.
 	
 ## Technologies
