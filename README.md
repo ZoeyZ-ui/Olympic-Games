@@ -57,4 +57,4 @@ We suggest countries utilize this information to predict how they will do in fut
 Since the size of the country has an influence on the performance of athletes, we also suggest setting different game groups for athletes coming from the different country size.
 
 ## Contact 
-Contact with me [Email](zhiyuan-zhao@uiowa.edu).
+Contact with me [Email](http://zhiyuan-zhao@uiowa.edu).
