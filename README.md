@@ -40,93 +40,84 @@ Project is created with:
 
                    
 
-olympics_allfeatures$GDP<- gsub(",","", olympics_allfeatures$GDP)
-olympics_allfeatures$GDP<- as.numeric(unlist(olympics_allfeatures$GDP))
-olympics_allfeatures$Population<- as.numeric(olympics_allfeatures$Population)
+`olympics_allfeatures$GDP<- gsub(",","", olympics_allfeatures$GDP)`
+`olympics_allfeatures$GDP<- as.numeric(unlist(olympics_allfeatures$GDP))`
+`olympics_allfeatures$Population<- as.numeric(olympics_allfeatures$Population)`
 
-#Question 1
-#Number of medals by Country size
-barplot(table(olympics_allfeatures$Population, olympics_allfeatures$Medal),
+`barplot(table(olympics_allfeatures$Population, olympics_allfeatures$Medal),
         main = "Medal_Population ",
         col=c("black"),
         ylim=c(0,500),
-        xlab="Total medal", ylab="Coutry Size")
+        xlab="Total medal", ylab="Coutry Size")`
 
-summary(olympics_allfeatures$Population)
+`summary(olympics_allfeatures$Population)`
 
-Size_medal<-table(olympics_allfeatures$Population, olympics_allfeatures$Medal)
-Size_medal
+`Size_medal<-table(olympics_allfeatures$Population, olympics_allfeatures$Medal)`
 
-Size_medal<-data.frame(Size_medal)
-Size_medal
-names(Size_medal)[names(Size_medal)=="Var1"]<-"Population"
-names(Size_medal)[names(Size_medal)=="Var2"]<-"Medal"
-View(Size_medal)
+`Size_medal<-data.frame(Size_medal)`
+`names(Size_medal)[names(Size_medal)=="Var1"]<-"Population"`
+`names(Size_medal)[names(Size_medal)=="Var2"]<-"Medal"`
 
 
-large_population<-subset(Size_medal, Size_medal$Population==33986655, select = c("Population", "Medal","Freq"))
-large_population
+`large_population<-subset(Size_medal, Size_medal$Population==33986655, select = c("Population", "Medal","Freq"))`
 
-large_population<-subset(Size_medal, Size_medal$Population==47737941, select = c("Population", "Medal","Freq"))
-large_population
+`large_population<-subset(Size_medal, Size_medal$Population==47737941, select = c("Population", "Medal","Freq"))`
 
 #Question 2
 #Number of medals by GDP
 
 #Titles NAS to No Medal
-olympics_allfeatures$Medal[is.na(olympics_allfeatures$Medal)] = "No Medal"
+`olympics_allfeatures$Medal[is.na(olympics_allfeatures$Medal)] = "No Medal"`
 
 #Medal count and the Average GDP for each medal type one 
-summ <- group_by(olympics_allfeatures, Medal) 
-medal_summary <- summarize(summ,
+`summ <- group_by(olympics_allfeatures, Medal) `
+`medal_summary <- summarize(summ,
                            total_medal = n(),
-                           average_GDP = mean(GDP)) 
+                           average_GDP = mean(GDP)) `
 medal_summary
 
 #Mean of overall GDPs in dataset
-mean(olympics_allfeatures$GDP)
-min(olympics_allfeatures$GDP)
-max(olympics_allfeatures$GDP)
+`mean(olympics_allfeatures$GDP)`
+`min(olympics_allfeatures$GDP)`
+`max(olympics_allfeatures$GDP)`
 
 #Box Plot of GDP vs Medal 
-boxplot(GDP~Medal, 
+`boxplot(GDP~Medal, 
         data=olympics_allfeatures,
         col= c("purple"),
         xlab="Medal", 
-        ylab="GDP")
+        ylab="GDP")`
 
 #Question 3
 
 #Dataset without NAs
-olympics_allfeatures1<- read.csv("olympics_allfeatures.csv",
+`olympics_allfeatures1<- read.csv("olympics_allfeatures.csv",
                                 header = TRUE,
                                 sep = ",",
-                                na.strings = c("NA", "Unknown", "", " ", "N/A"))
+                                na.strings = c("NA", "Unknown", "", " ", "N/A"))`
 
 #Removes Nas so it is just winners
-data_subset<- olympics_allfeatures1[ , c("Medal")]  
-olympics_allfeatures1 <-olympics_allfeatures1[complete.cases(data_subset), ]
-cs <- olympics_allfeatures1[complete.cases(data_subset), ]
+`data_subset<- olympics_allfeatures1[ , c("Medal")]  `
+`olympics_allfeatures1 <-olympics_allfeatures1[complete.cases(data_subset), ]`
+`cs <- olympics_allfeatures1[complete.cases(data_subset), ]`
 
 #Logistical Regression of Age to Weight and Height
-oly_fit<-lm(Age~Weight,Height,data=olympics_allfeatures)
-summary(oly_fit)
+`oly_fit<-lm(Age~Weight,Height,data=olympics_allfeatures)`
 
 #Correlation between Weight and Height
-oly_fit<-lm(Weight~Height,data=olympics_allfeatures1)
-oly_fit
+`oly_fit<-lm(Weight~Height,data=olympics_allfeatures1)`
 
-plot(Weight~Height,data=olympics_allfeatures1)
-abline(oly_fit, col="red")
+`plot(Weight~Height,data=olympics_allfeatures1)`
+`abline(oly_fit, col="red")`
 
 #Question 4
 #Country count based on Sport
 
-summ <- group_by(olympics_allfeatures, Country, Sport)
+`summ <- group_by(olympics_allfeatures, Country, Sport)`
 
-country_summary <-summarize(summ,
+`country_summary <-summarize(summ,
                             people_competing = n(),
-                            average_GDP = mean(GDP))
+                            average_GDP = mean(GDP))`
 
 
 
