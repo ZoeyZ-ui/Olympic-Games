@@ -1,6 +1,6 @@
 # Olympic-Games
 ## Table of contents
-* [General info] (# general-info)
+* [General info] (https://github.com/ZoeyZ-ui/Olympic-Games#General info.)
 * [Technologies] (# technologies)
 * [Data] (# data)
 * [Analysis] (# analysis)
