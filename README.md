@@ -11,7 +11,7 @@ Project is created with:
 
 ## Data 
 * Years of Olympic History 
-* 	we 
+	* we used 
 * Country Information 
 
 ## Analysis 
