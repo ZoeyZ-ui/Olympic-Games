@@ -63,55 +63,40 @@ Project is created with:
 
 `large_population<-subset(Size_medal, Size_medal$Population==47737941, select = c("Population", "Medal","Freq"))`
 
-#Question 2
-#Number of medals by GDP
 
-#Titles NAS to No Medal
 `olympics_allfeatures$Medal[is.na(olympics_allfeatures$Medal)] = "No Medal"`
 
-#Medal count and the Average GDP for each medal type one 
 `summ <- group_by(olympics_allfeatures, Medal) `
 `medal_summary <- summarize(summ,
                            total_medal = n(),
                            average_GDP = mean(GDP)) `
-medal_summary
 
-#Mean of overall GDPs in dataset
 `mean(olympics_allfeatures$GDP)`
 `min(olympics_allfeatures$GDP)`
 `max(olympics_allfeatures$GDP)`
 
-#Box Plot of GDP vs Medal 
 `boxplot(GDP~Medal, 
         data=olympics_allfeatures,
         col= c("purple"),
         xlab="Medal", 
         ylab="GDP")`
 
-#Question 3
-
-#Dataset without NAs
 `olympics_allfeatures1<- read.csv("olympics_allfeatures.csv",
                                 header = TRUE,
                                 sep = ",",
                                 na.strings = c("NA", "Unknown", "", " ", "N/A"))`
 
-#Removes Nas so it is just winners
 `data_subset<- olympics_allfeatures1[ , c("Medal")]  `
 `olympics_allfeatures1 <-olympics_allfeatures1[complete.cases(data_subset), ]`
 `cs <- olympics_allfeatures1[complete.cases(data_subset), ]`
 
-#Logistical Regression of Age to Weight and Height
 `oly_fit<-lm(Age~Weight,Height,data=olympics_allfeatures)`
 
-#Correlation between Weight and Height
 `oly_fit<-lm(Weight~Height,data=olympics_allfeatures1)`
 
 `plot(Weight~Height,data=olympics_allfeatures1)`
 `abline(oly_fit, col="red")`
 
-#Question 4
-#Country count based on Sport
 
 `summ <- group_by(olympics_allfeatures, Country, Sport)`
 
