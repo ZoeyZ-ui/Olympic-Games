@@ -33,10 +33,12 @@ Project is created with:
 	* This dataset includes the GDP and Population of each country in 2014. 
 
 ## Analysis 
-`olympics_allfeatures<- read.csv("olympics_allfeatures.csv",
-                    header = TRUE,
+`olympics_allfeatures<- read.csv("olympics_allfeatures.csv", header = TRUE,
                     sep = ",",
-                    na.strings = c("NA", "Unknown", "", " ", "N/A"))
+                    na.strings = c("NA", "Unknown", "", " ", "N/A"))`
+
+
+                   
 
 olympics_allfeatures$GDP<- gsub(",","", olympics_allfeatures$GDP)
 olympics_allfeatures$GDP<- as.numeric(unlist(olympics_allfeatures$GDP))
@@ -125,9 +127,6 @@ summ <- group_by(olympics_allfeatures, Country, Sport)
 country_summary <-summarize(summ,
                             people_competing = n(),
                             average_GDP = mean(GDP))
-
-country_summary
-View(country_summary)`
 
 
 
