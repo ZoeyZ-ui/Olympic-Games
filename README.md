@@ -43,4 +43,6 @@ Third, the correlation between weight and height of athletes showed us that athl
 
 Finally, the summary table we created showed us that not all countries participate in every sporting event that is held at the Olympic Games. 
 
-We suggest countries utilize this information to predict how they will do in future Olympic games. The countries can use this to determine how their current population and GDP will impact their performance. Since the size of the country has an influence on the performance of athletes, we also suggest setting different game groups for athletes coming from the different country size.
+We suggest countries utilize this information to predict how they will do in future Olympic games. The countries can use this to determine how their current population and GDP will impact their performance. 
+
+Since the size of the country has an influence on the performance of athletes, we also suggest setting different game groups for athletes coming from the different country size.
