@@ -1,6 +1,6 @@
 # Olympic-Games
 
-## Generalinfo
+## General info
 The Olympic Games is an internationally celebrated, multi-sports event that takes place every two years. Competition and comradery among countries is what attracts people to this event. 
 
 In this project we plan to examine the important features of the Olympics and the effect their country's size and GDP has on their performance. This information could help the Olympic Coordinators predict how countries will do in future Olympics based on the population and GDP of their country.
