@@ -5,6 +5,7 @@
 * [Technologies](#technologies)
 * [Questions](#questions)
 * [Data](#data)
+* [Code](#code)
 * [Analysis](#analysis)
 * [Conclusion](#conclusion)
 * [Contact](#contact)
@@ -32,7 +33,7 @@ Project is created with:
 * Country Information 
 	* This dataset includes the GDP and Population of each country in 2014. 
 
-## Analysis 
+## Code
 `olympics_allfeatures<- read.csv("olympics_allfeatures.csv", header = TRUE,
                     sep = ",",
                     na.strings = c("NA", "Unknown", "", " ", "N/A"))`
@@ -105,7 +106,7 @@ Project is created with:
                             average_GDP = mean(GDP))`
 
 
-
+## Analysis 
 The plot indicated that the countries with a larger population win more bronze and silver medals and win more medals overall. In the summary table, we also got the mean population for all countries is 43020000. 
 
 In table 2, Countries that have a population above 43020000 got more medals than countries with a population below 43020000. Based on the findings, we can conclude that the population of countries can influence athletes’ performance. Countries that have a larger population are more likely to win medals.	
